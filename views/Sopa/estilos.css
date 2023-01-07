@@ -1,0 +1,82 @@
+body {
+    background-image: url(./img/1.jpg);
+}
+
+#sopa {
+    margin: 5x;
+}
+
+#contenedor {
+    float: left;
+    width: 600px;
+    height: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+#contenedor2 {
+    float: right;
+    width: 700px;
+    height: 600px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#contenedor3 {
+    float: left;
+    width: 350px;
+    height: 100px;
+}
+
+#contenedor4 {
+    float: right;
+    ;
+    width: 350px;
+    height: 100px;
+}
+
+.caja {
+    margin: 3px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(58, 52, 52, 0.3);
+    border-radius: 5px;
+    float: left;
+}
+
+.resaltar {
+    color: floralwhite;
+    background-color: brown;
+}
+
+h1,
+h2 {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#ocultar1,
+#ocultar2,
+#ocultar3,
+#ocultar4,
+#ocultar5,
+#ocultar6,
+#ocultar7,
+#ocultar8,
+#ocultar9,
+#ocultar10 {
+    display: none;
+    color: rgb(3, 3, 148);
+}
+
+p {
+    font-weight: bold;
+}
+
+h1 {
+    text-decoration: underline black;
+}

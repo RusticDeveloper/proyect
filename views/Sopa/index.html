@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Sopa/estilos.css">
+    <title>Sopa de Letras</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="../Sopa/jquery.js"></script>
+
+</head>
+
+<body id="fondo">
+    <h1>ENCUENTRA LAS PALABRAS CLAVE</h1>
+    <div id="sopa">
+        <div id="contenedor">
+            <div class="caja reduce recicla" value="Reducir" id="redu"><strong>R</strong></div>
+            <div class="caja reduce" id="redu"><strong>E</strong></div>
+            <div class="caja reduce" id="redu"><strong>D</strong></div>
+            <div class="caja reduce" id="redu"><strong>U</strong></div>
+            <div class="caja reduce" id="redu"><strong>C</strong></div>
+            <div class="caja reduce" id="redu"><strong>E</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>C</strong></div>
+            <div class="caja"><strong>E</strong></div>
+            <div class="caja apagar"><strong>A</strong></div>
+
+            <div class="caja recicla"><strong>E</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja separar"><strong>S</strong></div>
+            <div class="caja separar"><strong>E</strong></div>
+            <div class="caja separar"><strong>P</strong></div>
+            <div class="caja separar"><strong>A</strong></div>
+            <div class="caja separar"><strong>R</strong></div>
+            <div class="caja separar"><strong>A</strong></div>
+            <div class="caja separar"><strong>R</strong></div>
+            <div class="caja"><strong>C</strong></div>
+            <div class="caja apagar"><strong>P</strong></div>
+
+            <div class="caja recicla"><strong>C</strong></div>
+            <div class="caja"><strong>Z</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>Z</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>C</strong></div>
+            <div class="caja"><strong>E</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja apagar"><strong>A</strong></div>
+
+            <div class="caja recicla"><strong>I</strong></div>
+            <div class="caja"><strong>k</strong></div>
+            <div class="caja"><strong>T</strong></div>
+            <div class="caja"><strong>I</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja cerrar"><strong>R</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>C</strong></div>
+            <div class="caja reutiliza"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja apagar"><strong>G</strong></div>
+
+
+            <div class="caja recicla"><strong>C</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>D</strong></div>
+            <div class="caja"><strong>T</strong></div>
+            <div class="caja cerrar"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja reutiliza"><strong>Z</strong></div>
+            <div class="caja"><strong>C</strong></div>
+            <div class="caja"><strong>E</strong></div>
+            <div class="caja apagar"><strong>A</strong></div>
+
+            <div class="caja recicla" recicla><strong>L</strong></div>
+            <div class="caja"><strong>L</strong></div>
+            <div class="caja"><strong>U</strong></div>
+            <div class="caja cerrar"><strong>R</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja reutiliza"><strong>I</strong></div>
+            <div class="caja"><strong>F</strong></div>
+            <div class="caja"><strong>Z</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja apagar"><strong>R</strong></div>
+
+            <div class="caja recicla"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja cerrar"><strong>R</strong></div>
+            <div class="caja"><strong>E</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja reutiliza"><strong>L</strong></div>
+            <div class="caja llevar"><strong>L</strong></div>
+            <div class="caja llevar"><strong>E</strong></div>
+            <div class="caja llevar"><strong>V</strong></div>
+            <div class="caja llevar"><strong>A</strong></div>
+
+            <div class="caja llevar"><strong>R</strong></div>
+            <div class="caja"><strong>J</strong></div>
+            <div class="caja cerrar"><strong>E</strong></div>
+            <div class="caja"><strong>U</strong></div>
+            <div class="caja"><strong>L</strong></div>
+            <div class="caja reutiliza"><strong>I</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja cerrar"><strong>C</strong></div>
+            <div class="caja"><strong>E</strong></div>
+            <div class="caja"><strong>T</strong></div>
+            <div class="caja reutiliza"><strong>T</strong></div>
+            <div class="caja muevete"><strong>E</strong></div>
+            <div class="caja muevete"><strong>T</strong></div>
+            <div class="caja muevete"><strong>E</strong></div>
+            <div class="caja muevete"><strong>V</strong></div>
+            <div class="caja muevete"><strong>E</strong></div>
+            <div class="caja muevete"><strong>U</strong></div>
+
+            <div class="caja muevete"><strong>M</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>U</strong></div>
+            <div class="caja reutiliza"><strong>U</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>R</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>E</strong></div>
+            <div class="caja reutiliza"><strong>E</strong></div>
+            <div class="caja"><strong>C</strong></div>
+            <div class="caja"><strong>P</strong></div>
+            <div class="caja evitar"><strong>E</strong></div>
+            <div class="caja evitar"><strong>V</strong></div>
+            <div class="caja evitar"><strong>I</strong></div>
+            <div class="caja evitar"><strong>T</strong></div>
+            <div class="caja evitar"><strong>A</strong></div>
+            <div class="caja evitar"><strong>R</strong></div>
+            <div class="caja"><strong>A</strong></div>
+
+            <div class="caja reutiliza"><strong>R</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>A</strong></div>
+            <div class="caja"><strong>C</strong></div>
+            <div class="caja plantar"><strong>P</strong></div>
+            <div class="caja plantar"><strong>L</strong></div>
+            <div class="caja plantar"><strong>A</strong></div>
+            <div class="caja plantar"><strong>N</strong></div>
+            <div class="caja plantar"><strong>T</strong></div>
+            <div class="caja plantar"><strong>A</strong></div>
+            <div class="caja plantar"><strong>R</strong></div>
+
+        </div>
+        <div id="contenedor2">
+            <h2>🍂🍃Palabras Encontradas🍃🍂</h2>
+            <div id="contenedor3">
+                <div id="pregunta1">
+                    <p class="errores">1) La Regla de las 3 Erres son:</p>
+                    <p class="errores"> <strong id="ocultar1"> -Reduce</strong> </p>
+                    <p class="errores"> <strong id="ocultar2">-Recicla</strong> </p>
+                    <p class="errores"> <strong id="ocultar3">-Reutiliza</strong> </p>
+                </div>
+                <div id="pregunta2">
+                    <p class="errores">2) <strong id="ocultar4">Separar</strong> ________la basura.</p>
+                </div>
+                <div id="pregunta3">
+                    <p class="errores">3) <strong id="ocultar5">Cerrar</strong>________los grifos correctamente.</p>
+                    <br>
+                </div>
+                <div id="pregunta4">
+                    <p class="errores">4) <strong id="ocultar6">Evitar</strong>________ dejar los aparatos enchufados.
+                    </p><br>
+                </div>
+            </div>
+            <div id="contenedor4">
+                <div id="pregunta5">
+                    <p class="errores">5) <strong id="ocultar7"> Plantar</strong> ________arboles.</p><br>
+                </div>
+                <div id="pregunta6">
+                    <p class="errores">6) <strong id="ocultar8">Llevar</strong> ________tus propias bolsas al supermercado.
+                    </p><br>
+                </div>
+                <div id="pregunta7">
+                    <p class="errores">7) <strong id="ocultar9">Apagar</strong> ________las luces cuando las dejes de utilizar.
+                    </p>
+                </div><br>
+                <div id="pregunta8">
+                    <p class="errores">8) <strong id="ocultar10">Muevete</strong> ________en transporte publico.</p>
+                </div>
+                <div>
+                    <button type="button" onclick="window.location='../pagina.html';">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../Sopa/main.js"></script>
+
+</html>

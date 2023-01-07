@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Rompecabezas</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/image-puzzle.css" rel="stylesheet" />
+    <script src="js/image-puzzle.js"></script>
+</head>
+
+<body>
+    <div id="collage">
+        <h2>Rompecabezas</h2>
+        <hr />
+        <div id="playPanel" style="padding:5px;display:none;">
+            <h3 id="imgTitle"></h3>
+            <hr />
+            <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+                <ul id="sortable" class="sortable"></ul>
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div>Movimientos:</div>
+                        <div id="stepCount" class="stepCount">0</div>
+                    </div>
+                    <div id="timeBox">
+                        tiempo transcurrido: <span id="timerPanel"></span> secs
+                    </div>
+                    <img id="actualImage" />
+                    <div>Arregla las piezas para formar una imagene como esta.</div>
+                    <p id="levelPanel">
+                        <input type="radio" name="level" id="easy" checked="checked" value="3" onchange="imagePuzzle.startGame(images, this.value);" /> <label for="easy">Facil</label>
+                        <input type="radio" name="level" id="medium" value="4" onchange="imagePuzzle.startGame(images, this.value);" /> <label for="medium">Medio</label>
+                        <input type="radio" name="level" id="hard" value="5" onchange="imagePuzzle.startGame(images, this.value);" /> <label for="hard">Avanzado</label>
+                    </p>
+                    <div>
+
+                        <button id="newPhoto" type="button" class="btn" onclick="restart();">otra foto</button>
+                        <button type="button" onclick="window.location='../pagina.html';">Regresar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gameOver" style="display:none;">
+            <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
+                <h2 style="text-align:center">Felicidades Ganaste !!</h2>
+                <br /> Has completado el curso en...
+                <br /> <span id="stepCount" class="stepCount">0</span> Movimientos.
+                <br /> <span class="timeCount">0</span> Segundos<br />
+                <div>
+                    <button type="button" onclick="window.location.reload(true);">De nuevo</button>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var images = [{
+                src: 'images/R1.jpg',
+                title: 'Vida o Muerte'
+            }, {
+                src: 'images/R2.jpg',
+                title: 'Paisajes no contaminados'
+            }, {
+                src: 'images/R3.jpg',
+                title: 'Aguas Limpias'
+            }, {
+                src: 'images/R4.jpg',
+                title: 'Cuidame, limpiame, viveme'
+            }, {
+                src: 'images/R5.jpg',
+                title: 'Filtros naturales de agua'
+            }, {
+                src: 'images/3R.jpg',
+                title: 'Recicla tu basura'
+            }];
+
+            window.onload = function() {
+                var gridSize = document.querySelector('#levelPanel input[type="radio"]:checked').getAttribute('value');
+                imagePuzzle.startGame(images, gridSize);
+            };
+
+            function restart() {
+                var gridSize = document.querySelector('#levelPanel input[type="radio"]:checked').getAttribute('value');
+                imagePuzzle.startGame(images, gridSize);
+            }
+        </script>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</html>

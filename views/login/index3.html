@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../login/css/estilo.css">
+    <title>Iniciar Sesion</title>
+</head>
+
+<body background="../login/img/3.jpg">
+    <div id="contenedor2">
+        <div id="registro">
+
+            <p class="uno">Nombre:
+                <Input type="text" class="uno" id="nombre2"></Input>
+            </p> <br><br>
+            <p class="uno">Apellido:
+                <Input type="text" class="uno" id="apellido2"></Input>
+            </p> <br><br>
+            <p class="uno">Alias:
+                <Input type="text" class="uno" id="alias"></Input>
+            </p> <br>
+            <input type="submit" value="Play▶️" id="play" onclick="LDT()" class="boton3">
+            <a href="index.html"><input type="button" value="Regresar" href="" class="boton3"></a>
+
+        </div>
+    </div>
+
+</body>
+<!-- <script src="../login/js/invitados.js"></script> -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function LDT() {
+        let nombre = document.getElementById('nombre2').value
+        let apellido = document.getElementById('apellido2').value
+        let apodo = document.getElementById('alias').value
+        if (nombre !== "" && apellido !== "" && apodo !== "") {
+            axios.post('/cosa', {
+                    Nombre: nombre,
+                    Apellido: apellido,
+                    Alias: apodo
+                })
+                .then(function(response) {
+                    console.log(response);
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+            window.location = ('../pagina.html')
+        } else {
+            alert('llene todos los campos');
+        }
+
+    }
+</script>
+
+</html>

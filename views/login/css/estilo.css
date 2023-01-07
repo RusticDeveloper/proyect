@@ -1,0 +1,103 @@
+
+#contenedor {
+    height: auto;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #login {
+    width: 300px;
+    text-align: center;
+    
+  }
+  .boton{
+    width:165px;
+    height:25px;
+    background-color:#03800b;
+    margin: 65px;
+    padding:10px;  
+    border-radius: 20px;
+    font-size:20px;
+    text-transform: uppercase;
+    float:left;
+  }
+  .boton:hover{
+    opacity: 0.50;
+    -moz-opacity: .50;
+    filter:alpha (opacity=50);
+  }
+  .boton a{
+    columns: #ffffff;
+    text-decoration:none;
+    padding:5px 5px 5px 0;
+  }
+  p { font-size: xx-large }
+
+  .uno{
+      border-radius: 15px;
+      width: 300px;
+      height: 30px;
+}
+
+#contenedor2 {
+    height: auto;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  #registro{
+    padding-top: 160px;
+    float:left;
+    width:300px;
+    text-align: center;
+    border-radius: 20px;
+   
+  }
+  .boton2{
+    width:165px;
+    height:45px;
+    background-color:#03800b;
+    margin: 65px;
+    padding:10px;  
+    border-radius: 20px;
+    font-size:20px;
+    text-transform: uppercase;
+    float:left;
+  }
+  #registro2{
+    float:left;
+
+    width: 300px;
+    text-align: center;
+    border-radius: 20px;
+   
+  }
+  #registro3{
+    float:right;
+
+    width: 300px;
+    text-align: center;
+    border-radius: 20px;
+   
+  }
+  .boton3{
+    width:165px;
+    height:45px;
+    background-color:#03800b;
+    margin: 65px;
+    padding:10px;  
+    border-radius: 20px;
+    font-size:20px;
+    text-transform: uppercase;
+    float:left;
+  }
+  #registro4{
+    width: 1000px;
+    text-align: center;
+    border-radius: 20px;
+   
+  }

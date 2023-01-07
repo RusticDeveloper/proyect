@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../login/css/estilosMenu.css">
+    <title>Estadisiticas de Juego </title>
+</head>
+
+<body background="../login/img/4.jpg">
+    <div id="contSopa">
+        <center>
+            <h2>Filtrar Datos</h2>
+        </center>
+        <!-- <p> <strong> Nombre: </strong> <br> <input type="text" class="uno" placeholder="Nombre" id="nombre"></p> -->
+        <button type="button" class="boton2" onclick="window.location='../pagina.html';">Regresar</button>
+        <input type="button" onclick="show()" value="Buscar" id="buscar" class="boton2"><br><br>
+
+        <table class="table" id="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Alias</th>
+
+
+                </tr>
+            </thead>
+
+        </table>
+
+    </div>
+
+</body>
+<!-- <script src="registro.js"></script> -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+    function show() {
+        // let texto = document.getElementById('nombre').value;
+        axios.post('/buscar', {
+                valor: 'texto'
+            })
+            .then(function(response) {
+                let tabla = document.getElementById('table')
+
+                for (let a = 0; a < response.data.length; a++) {
+                    let td = document.createElement('td')
+                    let td1 = document.createElement('td')
+                    let td2 = document.createElement('td')
+                    let tr = document.createElement('tr')
+                    td.appendChild(document.createTextNode(response.data[a].nombre))
+                    td1.appendChild(document.createTextNode(response.data[a].apellido))
+                    td2.appendChild(document.createTextNode(response.data[a].apodo))
+                    tr.appendChild(td)
+                    tr.appendChild(td1)
+                    tr.appendChild(td2)
+                    tabla.appendChild(tr)
+                }
+
+                console.log(response);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    }
+</script>
+
+</html>
